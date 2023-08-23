@@ -1,0 +1,194 @@
+*{margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+
+
+body {height:100vh;
+      width:100vw;
+}
+
+
+.container {background-color:teal;
+            height:100%;
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            
+}
+
+.frame::before{content:"";
+        background-color:blue;
+        height:60px;
+        width:120px;
+        border-radius:30%;
+        position:relative;
+        display:block;
+        transition:all 1s ease-in;
+
+
+ 
+
+
+}
+
+
+.frame{  
+         height:60px;
+         width:120px;
+         border-radius:30%;
+         display:flex;
+         align-items:center;
+         justify-content:center;
+         z-index:1;
+
+
+l
+
+         
+         
+         
+         
+
+}
+
+.frame::after{content:"";
+          background-color:white;
+          height:75px;
+          width:75px;
+          margin-left:-100px;
+          position:absolute;
+          border-radius:50%;
+          display:block;
+          transition:all 0.5s linear;
+
+
+
+
+}
+
+
+#btn{height:100px;
+      width:160px;
+      position:absolute;
+      opacity:0;
+      z-index:3;
+
+
+}
+
+#btn[type=checkbox]:checked ~ .frame{
+
+   border:1px solid white;
+   animation:click 1s linear;
+
+ 
+
+   
+
+}
+
+
+
+
+#btn[type=checkbox]:checked ~ .frame::after{
+     margin-left:100px;
+
+
+}
+
+#btn[type=checkbox]:checked ~ .frame::before{
+    background-color:red;
+
+
+}
+
+
+
+.bg {
+     height:100%;
+     width:100%;
+     position:absolute;
+     display:block;
+     z-index:0;
+     
+     
+
+}
+
+
+#btn[type=checkbox]:checked ~ .bg{
+    background-color:black;
+    animation:bgc 0.5s linear;
+
+
+}
+
+@keyframes bgc{
+
+0%{ height:0%;
+   width:0%;
+
+}
+
+20%{height:20%;
+   width:20%;
+   border-radius:20%;
+}
+
+
+50%{height:50%;
+   width:50%;
+   border-radius:20%;
+}
+
+
+
+
+80%{height:80%;
+   width:80%;
+   border-radius:20%;
+
+}
+
+100%{height:100%;
+   width:100%;
+   border-radius:0%;
+   
+
+}
+
+
+
+}
+
+
+
+@keyframes click {
+
+0%{ height:60px;
+    width:120px;
+
+
+}
+
+
+
+50%{ height:100px;
+    width:170px;
+
+
+}
+
+
+100%{ height:60px;
+    width:120px;
+
+}
+
+}
+
+
+
